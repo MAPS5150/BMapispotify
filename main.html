@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>carrusel</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators" style="background-color: black;">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        
+                    </ol>
+                    <div class="carousel-inner" >
+                        <!-- slidec1 -->
+                        <div class="carousel-item active">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="podbios1.png" alt="Card image cap">
+                                <div class="card-body" style="background: lightgray;">
+                                    <div class='row'>
+                                        <div class='offset-md-1 col-sm-4' id='song-detail'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slidec2 -->
+                        <div class="carousel-item">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="podbios2.png" alt="Card image cap">
+                                <div class="card-body" style="background: lightgray;">
+                                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0LoH6lFQLNscy3RyljAewK?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slidec3 -->
+                        <div class="carousel-item">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="podbios3.png" alt="Card image cap">
+                                <div class="card-body" style="background: lightgray;">
+                                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6Nd6ntkzr4t8o1FKPGOSMt?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slidec4 -->
+                        <div class="carousel-item">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="podbios1.png" alt="Card image cap">
+                                <div class="card-body" style="background: lightgray;">
+                                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5VudUMWkM9HZxseTOPwO54?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slidec5 -->
+                        <div class="carousel-item">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="podbios2.png" alt="Card image cap">
+                                <div class="card-body" style="background: lightgray;">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slidec6 -->
+                        <div class="carousel-item">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="podbios3.png" alt="Card image cap">
+                                <div class="card-body" style="background: lightgray;">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!-- Botones de acceso a la API de Spotify -->
+                <div class="position2">
+                    <i class="fa-brands fa-spotify spoti" style="color: green;"></i>
+                    <form action="" class="musicdata">
+                        <input type='hidden' id='hidden_token'>
+                        <div class='col-sm-6 form-group row mt-4 px-0'>
+                            <label for='Genre' class='form-label col-sm-2 gender'>Género:</label>
+                            <select name='' id='select_genre' class='form-control form-control-sm col-sm-10'>
+                                <option>Seleccionar...</option>                    
+                            </select>
+                        </div>
+                        <div class='col-sm-6 form-group row px-0'>
+                            <label for='Genre' class='form-label col-sm-2 playlist'>Lista de reproducción:</label>
+                            <select name='' id='select_playlist' class='form-control form-control-sm col-sm-10'>
+                                <option>Seleccionar...</option>                    
+                            </select>
+                        </div>                  
+                        <div class='col-sm-6 row form-group px-0'>
+                            <button type='submit' id='btn_submit' class='btn btn-success col-sm-12'>Buscar</button>
+                        </div>    
+                    </form>
+                    <div class="row">
+                        <div class='col-sm-6 px-0'>
+                            <div class='list-group song-list'>
+                                        
+                            </div>                                             
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
